@@ -31,6 +31,7 @@
 \usepackage{float}
 \usepackage{minted}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
 \usemintedstyle{pastie}
 
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
@@ -57,10 +58,15 @@
 	\citeauthor{#1}~(\citeyear{#1})}
 
 % formatting - times new roman text and titles arial
-\usepackage[T1]{fontenc}
-\usepackage{newtxmath,newtxtext}
 \usepackage{fontspec}
-\newfontfamily\arialfont{Arial}
+\usepackage{newtxmath,newtxtext}
+\newfontfamily{\arialfont}[
+  Path = /usr/share/fonts/TTF/,
+  UprightFont = Arial.TTF,
+  BoldFont = Arialbd.TTF,
+  ItalicFont = Ariali.TTF,
+  BoldItalicFont = Arialbi.TTF
+]{Arial}
 
 %line spacing
 \usepackage{setspace}
@@ -166,7 +172,7 @@
 \begin{minipage}{0.4\textwidth}
 % Mentor
 \begin{flushleft}
-    \textbf{Mentor: }\\ 
+    \textbf{Mentor: }\\
     \mentor
 \end{flushleft}
 \end{minipage}
